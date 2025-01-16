@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Stethoscope, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Building2 className="h-6 w-6 text-blue-400" />
+              <Stethoscope className="h-6 w-6 text-blue-400" />
               <span className="text-xl font-bold">MediCare</span>
             </div>
             <p className="text-gray-400 mb-4">

@@ -3,10 +3,11 @@ import { categories } from '../data';
 import CategoryCard from '../components/CategoryCard';
 import Footer from '../components/Footer';
 import { Award, Clock, Users, Activity } from 'lucide-react';
+import FloatingChatBot from "../components/FloatingChatBot.tsx";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 mt-16">
       {/* Hero Section */}
       <div 
         className="bg-cover bg-center h-[500px] relative"
@@ -91,6 +92,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <FloatingChatBot />
 
       <Footer />
     </div>
