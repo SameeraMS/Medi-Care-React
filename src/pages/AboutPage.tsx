@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-blue-600 text-white py-20" style={{
-        backgroundImage: "url('..//src/assets/images/about.jpg')",
+        backgroundImage: "url('https://img.freepik.com/free-vector/digital-health-medical-research-background-with-heartbeat-line_1017-50392.jpg?t=st=1737049456~exp=1737053056~hmac=d3e2091ecd47cf036450aeeabfd451349dcb1450ca3a0e151a1751edfdcfe6b8&w=1800')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}>
