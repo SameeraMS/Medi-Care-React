@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+94 77 958 2592</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
@@ -70,6 +70,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">&copy; {new Date().getFullYear()} MediCare. All rights reserved.</p>
+          <p className="text-gray-400">Developed by Sameera MS</p>
         </div>
       </div>
     </footer>

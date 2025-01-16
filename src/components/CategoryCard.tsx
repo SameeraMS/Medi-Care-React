@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  HeartPulse, Brain, Baby, Bone, Eye, Tooth, 
+  HeartPulse, Brain, Baby, Bone, Eye,
   Stethoscope, Microscope, Syringe, Activity
 } from 'lucide-react';
 import { Category } from '../types';

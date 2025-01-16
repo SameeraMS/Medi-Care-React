@@ -11,7 +11,7 @@ export default function Home() {
       <div 
         className="bg-cover bg-center h-[500px] relative"
         style={{
-          backgroundImage: "url('src/assets/images/home.jpg')"
+          backgroundImage: "url('../src/assets/images/home.jpg')"
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

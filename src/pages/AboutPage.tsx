@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-blue-600 text-white py-20" style={{
-        backgroundImage: "url('src/assets/images/about.jpg')",
+        backgroundImage: "url('..//src/assets/images/about.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}>

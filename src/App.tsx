@@ -6,6 +6,7 @@ import HospitalsPage from './pages/HospitalsPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import DoctorsPage from "./pages/DoctorsPage.tsx";
+import CategoryPage from "./pages/CategoryPage.tsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/doctors" element={<DoctorsPage />} />
+            <Route path="/category/:id" element={<CategoryPage />} />
             <Route path="/hospitals" element={<HospitalsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />

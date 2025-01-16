@@ -39,8 +39,8 @@ export default function ContactPage() {
                   <Phone className="w-6 h-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
+                    <p className="text-gray-600">+94 77 958 2592</p>
+                    <p className="text-gray-600">+94 77 958 2592</p>
                   </div>
                 </div>
 
