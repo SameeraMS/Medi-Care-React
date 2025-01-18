@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { MessageCircleMore, Send, X} from "lucide-react";
 
 const FloatingChatBot: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [prompt, setPrompt] = useState("");
+    const [isHovered, setIsHovered] = useState(false);
     const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
     const apiKey = "AIzaSyCz22jnaoS2yS-oOm5mBPZreExFAmcbIn4"; // Replace with your API key
 
@@ -51,7 +53,7 @@ const FloatingChatBot: React.FC = () => {
                     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 }}
             >
-                💬
+                <MessageCircleMore />
             </div>
 
             {/* Chat Popup */}
@@ -61,12 +63,11 @@ const FloatingChatBot: React.FC = () => {
                         position: "fixed",
                         bottom: "80px",
                         right: "20px",
-                        width: "300px",
-                        height: "400px",
+                        width: "380px",
+                        height: "500px",
                         backgroundColor: "white",
-                        border: "1px solid #ddd",
-                        borderRadius: "8px",
-                        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                        borderRadius: "10px",
+                        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
                         zIndex: 1000,
                         display: "flex",
                         flexDirection: "column",
@@ -75,14 +76,12 @@ const FloatingChatBot: React.FC = () => {
                     {/* Header */}
                     <div
                         style={{
-                            backgroundColor: "#007bff",
-                            color: "white",
                             padding: "10px",
                             textAlign: "center",
                             fontWeight: "bold",
                         }}
                     >
-                        Chat with AI
+                        MediCare Chat
                         <span
                             onClick={toggleChat}
                             style={{
@@ -92,7 +91,7 @@ const FloatingChatBot: React.FC = () => {
                                 cursor: "pointer",
                             }}
                         >
-              ✖️
+              <X />
             </span>
                     </div>
 
@@ -113,7 +112,7 @@ const FloatingChatBot: React.FC = () => {
                                     marginBottom: "10px",
                                 }}
                             >
-                                <strong>{msg.sender}:</strong>
+                                {/*<strong>{msg.sender}:</strong>*/}
                                 <p
                                     style={{
                                         display: "inline-block",
@@ -133,10 +132,8 @@ const FloatingChatBot: React.FC = () => {
                     <div
                         style={{
                             padding: "10px",
-                            borderTop: "1px solid #ddd",
                             display: "flex",
                             alignItems: "center",
-                            backgroundColor: "white",
                         }}
                     >
                         <input
@@ -147,9 +144,12 @@ const FloatingChatBot: React.FC = () => {
                             style={{
                                 flex: 1,
                                 padding: "8px",
-                                borderRadius: "4px",
-                                border: "1px solid #ddd",
+                                borderRadius: "8px",
+                                border: isHovered ? "1px solid #007bff" : "1px solid #ddd",
+                                transition: "border-color 0.2s ease-in-out",
                             }}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
                             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                         />
                         <button
@@ -164,7 +164,7 @@ const FloatingChatBot: React.FC = () => {
                                 cursor: "pointer",
                             }}
                         >
-                            Send
+                            <Send />
                         </button>
                     </div>
                 </div>

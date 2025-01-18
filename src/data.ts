@@ -16,7 +16,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 12,
         rating: 4.8,
-        consultationFee: 150
+        consultationFee: 1500
       },
       {
         id: 102,
@@ -25,7 +25,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 15,
         rating: 4.9,
-        consultationFee: 200
+        consultationFee: 2000
       }
     ]
   },
@@ -42,7 +42,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 10,
         rating: 4.7,
-        consultationFee: 180
+        consultationFee: 1800
       }
     ]
   },
@@ -59,7 +59,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 8,
         rating: 4.9,
-        consultationFee: 120
+        consultationFee: 1200
       }
     ]
   },
@@ -76,7 +76,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 14,
         rating: 4.8,
-        consultationFee: 160
+        consultationFee: 1600
       }
     ]
   },
@@ -93,7 +93,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 11,
         rating: 4.7,
-        consultationFee: 140
+        consultationFee: 1400
       }
     ]
   },
@@ -110,7 +110,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 9,
         rating: 4.8,
-        consultationFee: 130
+        consultationFee: 1300
       }
     ]
   },
@@ -127,7 +127,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 13,
         rating: 4.6,
-        consultationFee: 100
+        consultationFee: 1000
       }
     ]
   },
@@ -144,7 +144,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 16,
         rating: 4.9,
-        consultationFee: 170
+        consultationFee: 1700
       }
     ]
   },
@@ -161,7 +161,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 10,
         rating: 4.8,
-        consultationFee: 160
+        consultationFee: 1600
       }
     ]
   },
@@ -178,7 +178,7 @@ export const categories: Category[] = [
         image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300",
         experience: 14,
         rating: 4.7,
-        consultationFee: 150
+        consultationFee: 1500
       }
     ]
   }
@@ -206,7 +206,7 @@ export const hospitals: Hospital[] = [
             image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300&h=300",
             experience: 12,
             rating: 4.8,
-            consultationFee: 150
+            consultationFee: 1500
           },
           {
             id: 102,
@@ -215,7 +215,7 @@ export const hospitals: Hospital[] = [
             image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300",
             experience: 15,
             rating: 4.9,
-            consultationFee: 200
+            consultationFee: 2000
           }
         ]
       },
@@ -232,7 +232,7 @@ export const hospitals: Hospital[] = [
             image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=300",
             experience: 10,
             rating: 4.7,
-            consultationFee: 180
+            consultationFee: 1800
           }
         ]
       }
@@ -258,7 +258,7 @@ export const hospitals: Hospital[] = [
             image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300&h=300",
             experience: 8,
             rating: 4.9,
-            consultationFee: 120
+            consultationFee: 1200
           }
         ]
       }
@@ -284,7 +284,7 @@ export const hospitals: Hospital[] = [
             image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300&h=300",
             experience: 14,
             rating: 4.8,
-            consultationFee: 160
+            consultationFee: 1600
           }
         ]
       }
