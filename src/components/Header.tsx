@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, LogIn, LogOut, ChevronDown, Stethoscope} from 'lucide-react';
+import {Menu, X, LogIn, LogOut, ChevronDown, Stethoscope} from 'lucide-react';
 import AuthModal from './AuthModal';
 
 export default function Header() {
@@ -43,6 +43,15 @@ export default function Header() {
               <Link to="/hospitals" className="text-gray-600 hover:text-blue-600">Hospitals</Link>
               <Link to="/about" className="text-gray-600 hover:text-blue-600">About Us</Link>
               <Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
+
+              {user && (
+                  <Link
+                      to="/appointment"
+                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                  >
+                    <span>My Appointments</span>
+                  </Link>
+              )}
 
               {user ? (
                   <div className="relative">
@@ -91,6 +100,16 @@ export default function Header() {
               <Link to="/hospitals" className="text-white hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Hospitals</Link>
               <Link to="/about" className="text-white hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>About Us</Link>
               <Link to="/contact" className="text-white hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+
+              {user && (
+                  <Link
+                      to="/appointment"
+                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                      onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>My Appointments</span>
+                  </Link>
+              )}
 
               {user ? (
                   <div className="border-t pt-4">

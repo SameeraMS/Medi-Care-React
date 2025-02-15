@@ -12,7 +12,8 @@ export default function Home() {
       <div 
         className="bg-cover bg-center h-[500px] relative"
         style={{
-          backgroundImage: "url('https://img.freepik.com/free-vector/health-care-background-banner-with-medical-electrocardiogram_1017-20049.jpg?t=st=1737038461~exp=1737042061~hmac=fe05cf3562fa18b19928fd8ebc5918bd591de9209ff6519cdafbf28feb3706c5&w=1800')"
+          // backgroundImage: "url('https://img.freepik.com/free-vector/health-care-background-banner-with-medical-electrocardiogram_1017-20049.jpg?t=st=1737038461~exp=1737042061~hmac=fe05cf3562fa18b19928fd8ebc5918bd591de9209ff6519cdafbf28feb3706c5&w=1800')"
+          backgroundImage: "url('../src/assets/images/home.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">

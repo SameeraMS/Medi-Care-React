@@ -34,12 +34,9 @@ export interface TimeSlot {
 export interface Appointment {
   id: string;
   doctorId: number;
-  hospitalId: number;
   patientName: string;
   patientEmail: string;
   date: string;
   timeSlot: string;
-  status: 'pending' | 'confirmed' | 'cancelled';
-  paymentStatus: 'pending' | 'completed';
-  paymentIntentId?: string;
+  fee: number;
 }
