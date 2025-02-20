@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { Doctor, TimeSlot } from '../types';
-import { loadStripe } from '@stripe/stripe-js';
+import axios from '../utils/axios';
 
 interface BookingModalProps {
   doctor: Doctor;
@@ -30,12 +30,33 @@ export default function BookingModal({ doctor, onClose }: BookingModalProps) {
     setIsLoading(true);
     setError(null);
 
-    try {
-      // Simulate a successful booking (replace with actual backend call)
-      await new Promise(resolve => setTimeout(resolve, 1500));
+    if (!selectedTimeSlot) {
+      setError('Please select a time slot.');
+      setIsLoading(false);
+      return;
+    }
 
-      alert(`Appointment booked successfully with ${doctor.name}!`);
-      onClose();
+    try {
+      const payload = {
+        userId: localStorage.getItem('userId'), // Replace with actual user ID from authentication
+        docId: doctor.id,
+        hospitalId: "H53392", // Replace with actual hospital ID
+        date: selectedDate,
+        time: selectedTimeSlot,
+        fee: doctor.consultationFee,
+        patientName,
+        patientEmail,
+        patientPhone
+      };
+
+      const response = await axios.post('/appointments', payload);
+
+      if (response.status === 201) {
+        alert(`Appointment booked successfully with ${doctor.name}!`);
+        onClose();
+      } else {
+        throw new Error('Unexpected response from server.');
+      }
     } catch (err) {
       setError('Failed to book appointment. Please try again.');
     } finally {
