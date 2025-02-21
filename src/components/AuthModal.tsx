@@ -44,6 +44,8 @@ export default function AuthModal({ onClose, onSuccess }: AuthModalProps) {
             });
 
             onSuccess({ email: response.data.user.email, name: response.data.user.name });
+            localStorage.setItem('userId', response.data.user.id);
+            localStorage.setItem('email', response.data.user.email);
             onClose();
         } catch (err: any) {
             setError(err.response?.data?.message || 'Registration failed');
@@ -63,6 +65,8 @@ export default function AuthModal({ onClose, onSuccess }: AuthModalProps) {
             });
 
             onSuccess({ email: response.data.user.email, name: response.data.user.name });
+            localStorage.setItem('userId', response.data.user.id);
+            localStorage.setItem('email', response.data.user.email);
             onClose();
         } catch (err: any) {
             setError(err.response?.data?.message || 'Login failed');
