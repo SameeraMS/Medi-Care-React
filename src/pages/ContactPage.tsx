@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Footer from '../components/Footer';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,8 +13,22 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    const serviceId = 'service_9bsvbix';
+    const templateId = 'template_5pwh07k';
+    const publicKey = 'VDd9I0ZeOSjHE89gm';
+
+    emailjs.send(serviceId, templateId, formData, publicKey)
+        .then((response) => {
+          console.log('Email sent successfully!', response);
+          alert('Email sent successfully!');
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        })
+        .catch((error) => {
+          console.error('Email sending failed:', error);
+          alert('Failed to send email. Please try again.');
+        });
+
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
