@@ -31,7 +31,7 @@ export default function CategoryCard({ category }: CategoryCardProps) {
   }
 
   return (
-    <Link to={`/category/${category.id}`}>
+    <Link to={'/hospitals'}>
       <div className="bg-white rounded-full p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center justify-center aspect-square">
         <Icon className="w-12 h-12 text-blue-600 mb-3" />
         <h3 className="text-lg font-semibold text-gray-800">{category.name}</h3>

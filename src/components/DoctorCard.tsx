@@ -53,11 +53,15 @@ export default function DoctorCard({ doctor, onSelect }: DoctorCardProps) {
                 {/* Consultation Fee & Booking Button */}
                 <div className="mt-4 flex items-center justify-between">
                     {/*<span className="text-blue-600 font-semibold">LKR {doctor.consultationFee}</span>*/}
-                    <button
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
-                    >
-                        Book Now
-                    </button>
+                    {
+                        localStorage.getItem('hospitalId') && (
+                            <button
+                                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                            >
+                                Book Now
+                            </button>
+                        )
+                    }
                 </div>
                 {showAuthModal && (
                     <AuthModal

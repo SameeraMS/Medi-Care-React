@@ -66,7 +66,10 @@ export default function HospitalsPage() {
                             <div
                                 key={hospital._id}
                                 className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
-                                onClick={() => handleHospitalSelect(hospital)}
+                                onClick={() => {
+                                    handleHospitalSelect(hospital)
+                                    localStorage.setItem('hospitalId', hospital._id)
+                                }}
                             >
                                 <img src={hospital.image} alt={hospital.name} className="w-full h-48 object-cover" />
                                 <div className="p-6">

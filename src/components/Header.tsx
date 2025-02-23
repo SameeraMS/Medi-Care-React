@@ -23,6 +23,7 @@ export default function Header() {
   const handleLogout = () => {
     setUser(null);
     setShowProfileMenu(false);
+    localStorage.clear()
   };
 
   return (

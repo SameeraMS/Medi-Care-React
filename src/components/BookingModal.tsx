@@ -40,7 +40,7 @@ export default function BookingModal({ doctor, onClose }: BookingModalProps) {
       const payload = {
         userId: localStorage.getItem('userId'), // Replace with actual user ID from authentication
         docId: doctor.id,
-        hospitalId: "H53392", // Replace with actual hospital ID
+        hospitalId: localStorage.getItem('hospitalId'),
         date: selectedDate,
         time: selectedTimeSlot,
         fee: doctor.consultationFee,
