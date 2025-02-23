@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, X, LogIn, LogOut, ChevronDown, Stethoscope} from 'lucide-react';
 import AuthModal from './AuthModal';
@@ -8,6 +8,12 @@ export default function Header() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [user, setUser] = useState<{ email: string; name: string } | null>(null);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+
+    useEffect(() => {
+        if (localStorage.getItem('token') && localStorage.getItem('email')) {
+            setUser({ email: localStorage.getItem('email')!, name: localStorage.getItem('email')!.split('@')[0] });
+        }
+    }, []);
 
   const handleAuthSuccess = (userData: { email: string; name: string }) => {
     setUser(userData);

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { X, Mail, Phone, Lock, User } from 'lucide-react';
-import axios from '../utils/axios'; // Import Axios instance
+import axios, {updateAxiosHeaders} from '../utils/axios'; // Import Axios instance
 
 interface AuthModalProps {
     onClose: () => void;
@@ -36,19 +36,19 @@ export default function AuthModal({ onClose, onSuccess }: AuthModalProps) {
         setError('');
 
         try {
-            const response = await axios.post('/users', {
+            const response = await axios.post('/auth/user/register', {
                 name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
                 password: formData.password
             });
 
-            onSuccess({ email: response.data.user.email, name: response.data.user.name });
-            localStorage.setItem('userId', response.data.user.id);
-            localStorage.setItem('email', response.data.user.email);
-            onClose();
+            if (response.status === 201) {
+                setIsSignUp(!isSignUp)
+            }
         } catch (err: any) {
             setError(err.response?.data?.message || 'Registration failed');
+            console.log(err)
         }
         setLoading(false);
     };
@@ -59,14 +59,17 @@ export default function AuthModal({ onClose, onSuccess }: AuthModalProps) {
         setError('');
 
         try {
-            const response = await axios.post('/users/login', {
+            const response = await axios.post('/auth/user/login', {
                 email: formData.email,
                 password: formData.password
             });
 
             onSuccess({ email: response.data.user.email, name: response.data.user.name });
-            localStorage.setItem('userId', response.data.user.id);
+            localStorage.setItem('userId', response.data.user._id);
             localStorage.setItem('email', response.data.user.email);
+            localStorage.setItem('token', response.data.accessToken);
+            updateAxiosHeaders(response.data.accessToken);
+
             onClose();
         } catch (err: any) {
             setError(err.response?.data?.message || 'Login failed');

@@ -34,7 +34,11 @@ export default function Appointments() {
         const fetchAppointments = async () => {
             try {
                 const response = await axios.get(`/appointments/user/${userId}`);
-                setAppointments(response.data);
+
+                if (response.status == 200) {
+                    setAppointments(response.data);
+                }
+
             } catch (err) {
                 setError('Failed to load appointments. Please try again.');
             } finally {
