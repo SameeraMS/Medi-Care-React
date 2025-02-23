@@ -77,7 +77,8 @@ export default function Appointments() {
                     {appointments.map((appointment) => (
                         <div key={appointment._id} className="bg-white rounded-lg shadow-md p-6">
                             <div className="flex items-center justify-between mb-4">
-                                <h2 className="text-xl font-semibold">{appointment.docId.name}</h2>
+                                <h2 className="text-xl font-semibold">{appointment.docId?.name}</h2>
+                                <h2 className="text-xl font-semibold">{appointment.hospitalId?.name}</h2>
                                 <span
                                     className={`px-3 py-1 rounded-full text-sm ${
                                         getStatus(appointment.date) === 'Today'
@@ -110,13 +111,13 @@ export default function Appointments() {
 
                             <div className="mt-4 flex items-center space-x-4">
                                 <img
-                                    src={appointment.docId.image}
-                                    alt={appointment.docId.name}
+                                    src={appointment.docId?.image}
+                                    alt={appointment.docId?.name}
                                     className="w-12 h-12 rounded-full border"
                                 />
                                 <div>
-                                    <p className="text-sm font-medium">{appointment.docId.specialty}</p>
-                                    <p className="text-xs text-gray-500">Experience: {appointment.docId.experience} years</p>
+                                    <p className="text-sm font-medium">{appointment.docId?.specialty}</p>
+                                    <p className="text-xs text-gray-500">Experience: {appointment.docId?.experience} years</p>
                                 </div>
                             </div>
                         </div>
