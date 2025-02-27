@@ -7,9 +7,10 @@ import AuthModal from './AuthModal';
 interface DoctorCardProps {
     doctor: Doctor;
     onSelect: (doctor: Doctor) => void;
+    hospitalId: string;
 }
 
-export default function DoctorCard({ doctor, onSelect }: DoctorCardProps) {
+export default function DoctorCard({ doctor, onSelect, hospitalId }: DoctorCardProps) {
 
     const [showAuthModal, setShowAuthModal] = useState(false);
     const [user, setUser] = useState<{ email: string; name: string } | null>(null);
@@ -54,7 +55,7 @@ export default function DoctorCard({ doctor, onSelect }: DoctorCardProps) {
                 <div className="mt-4 flex items-center justify-between">
                     {/*<span className="text-blue-600 font-semibold">LKR {doctor.consultationFee}</span>*/}
                     {
-                        localStorage.getItem('hospitalId') && (
+                        hospitalId && (
                             <button
                                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
                             >

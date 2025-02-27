@@ -129,6 +129,7 @@ export default function HospitalsPage() {
                                                                 consultationFee: doc.fee
                                                             }}
                                                             onSelect={handleDoctorSelect}
+                                                            hospitalId={selectedHospital._id}
                                                         />
                                                     ))}
                                             </div>

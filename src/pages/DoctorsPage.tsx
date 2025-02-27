@@ -103,6 +103,7 @@ export default function DoctorsPage() {
                                                     key={doctor._id}
                                                     doctor={doctor}
                                                     onSelect={handleDoctorSelect}
+                                                    hospitalId=""
                                                 />
                                             ))}
                                         </div>

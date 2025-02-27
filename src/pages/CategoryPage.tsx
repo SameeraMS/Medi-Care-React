@@ -27,6 +27,7 @@ export default function CategoryPage() {
             key={doctor.id} 
             doctor={doctor} 
             onSelect={handleDoctorSelect}
+            hospitalId=""
           />
         ))}
       </div>

@@ -54,7 +54,7 @@ export default function Header() {
               {user && (
                   <Link
                       to="/appointment"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                      className="flex items-center text-gray-600 hover:text-blue-600"
                   >
                     <span>My Appointments</span>
                   </Link>
@@ -111,7 +111,7 @@ export default function Header() {
               {user && (
                   <Link
                       to="/appointment"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600"
+                      className="flex items-center text-white hover:text-blue-600"
                       onClick={() => setIsMenuOpen(false)}
                   >
                     <span>My Appointments</span>
